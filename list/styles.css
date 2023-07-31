@@ -39,6 +39,7 @@ li {
     color: #1414be;
     padding: 20px;
     position: relative;
+
 }
 
 li::after {
