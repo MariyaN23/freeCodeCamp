@@ -6,6 +6,9 @@ class Comment {
     upvote() {
         this.votesQty += 1
     }
+    static mergeComments(first, second) {
+        return `${first} ${second}`     //static - метод доступен как свойство класса, не наследуется другими экземплярами класса
+    }
 }
 
 const firstComment = new Comment('First comment')
@@ -43,3 +46,17 @@ firstComment.hasOwnProperty('hasOwnProperty')
 //создание еще экземпляров
 const secondComment = new Comment('Second comment')
 const thirdComment = new Comment('Third comment')
+
+Comment.mergeComments('First comment.', 'Second comment')
+//'First comment. Second comment'
+
+
+//расширение других классов
+class NumbersArray extends Array {
+    sum() {
+        return this.reduce((el, acc) => acc += el, 0)
+    }
+}
+const myArray = new NumbersArray(2, 5, 7)
+console.log(myArray)
+myArray.sum()
