@@ -3,16 +3,16 @@ function convertCtoF(celsius) {
     return celsius*9/5 + 32;
 }
 
-convertCtoF(30);
+console.log(convertCtoF(30))
 
-convertCtoF(-30);
+console.log(convertCtoF(-30))
 
 //Reverse a String
 function reverseString(str) {
     return str.split('').reverse('').join('');
 }
 
-reverseString("hello world");
+console.log(reverseString("hello world"))
 
 
 //Factorialize a Number
@@ -30,11 +30,11 @@ function factorialize2(num) {
     if (num === 1) {
         return num;
     } else {
-        return num*factorialize(num-1);
+        return num*factorialize2(num-1);
     }
 }
 
-factorialize2(5);
+console.log(factorialize2(5))
 
 //Find the Longest Word in a String
 function findLongestWordLength(str) {
@@ -48,11 +48,11 @@ function findLongestWordLength(str) {
     return long;
 }
 
-findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
 
 //Return Largest Numbers in Arrays
 function largestOfFour(arr) {
-    let largest = [0, 0, 0, 0];
+    let largest = [arr[0][0], arr[1][0], arr[2][0], arr[3][0]];
     for (let i=0; i<arr.length; i++) {
         for (let j=0; j<arr[i].length; j++) {
             if (arr[i][j] > largest[i]) {
@@ -60,8 +60,20 @@ function largestOfFour(arr) {
             }
         }
     }
-    console.log(largest)
     return largest;
 }
 //если отрицательные то будет 0!!!
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]))
+
+function largestOfFour2(arr) {
+    return [Math.max(...arr[0]), Math.max(...arr[1]), Math.max(...arr[2]), Math.max(...arr[3])]
+}
+
+console.log(largestOfFour2([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]))
+console.log(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]))
+
+/*function(a,b,c,d) {
+    return ...
+}
+function (1,2,3,4)
+funtion (...array)*/
