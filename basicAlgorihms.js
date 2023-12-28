@@ -76,4 +76,16 @@ console.log(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], 
     return ...
 }
 function (1,2,3,4)
-funtion (...array)*/
+function (...array)*/
+
+
+//Confirm the Ending
+function confirmEnding(str, target) {
+    let lastWords = str.slice(-target.length)
+    return lastWords === target
+}
+
+console.log(confirmEnding("Bastian", "n"))
+console.log(confirmEnding("Abstraction", "action"))
+
+//Repeat a String Repeat a String
