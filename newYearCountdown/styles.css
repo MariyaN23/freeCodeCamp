@@ -1,0 +1,34 @@
+body {
+    font-family: "Dancing Script", cursive;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #DCDCDCD3;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 110px;
+}
+
+.container div {
+    font-size: 40px;
+    width: 200px;
+    height: 250px;
+    background-color: #DCDCDCD3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media  (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
